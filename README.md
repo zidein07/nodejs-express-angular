@@ -1,3 +1,3 @@
-echo 'app on nodejs and angularjs'
+app on nodejs and angularjs
 
 
