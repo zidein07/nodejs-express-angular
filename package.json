@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/zidein07/nodejs-express-angular#readme",
   "dependencies": {
+    "bower": "^1.7.9",
     "browser-sync": "^2.12.10",
     "express": "^4.13.4",
     "gulp": "^3.9.1",

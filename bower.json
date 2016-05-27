@@ -1,0 +1,24 @@
+{
+  "name": "nodejs-express-angular",
+  "description": "app on nodejs and angularjs",
+  "main": "index.js",
+  "authors": [
+    "zidein <zidein07@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/zidein07/nodejs-express-angular",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5",
+    "jquery": "^2.2.4",
+    "bootstrap": "^3.3.6",
+    "lodash": "^4.13.1",
+    "angular-ui-bootstrap": "^1.3.3"
+  }
+}
