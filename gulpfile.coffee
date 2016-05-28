@@ -8,11 +8,10 @@ browserSync = require('browser-sync').create()
 
 gulp.task 'jade', ->
   gulp.src [
-    'public/jade/*.jade'
-    'public/jade/**/*.jade'
+    'public/views/*.jade'
   ]
   .pipe do jade
-  .pipe gulp.dest 'public/dist'
+  .pipe gulp.dest 'public/dist/tpl'
   browserSync.reload
 
 
@@ -28,7 +27,7 @@ gulp.task 'coffee', ->
   gulp.src 'public/coffee/*.coffee'
   .pipe do coffee
   .pipe do compressJs
-  .pipe gulp.dest 'public/dist/js'
+  .pipe gulp.dest 'public/dist/angular'
   browserSync.reload 'public/dist/*.*'
 
 
