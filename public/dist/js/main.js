@@ -1,0 +1,1 @@
+(function(){console.log("sd")}).call(this);
