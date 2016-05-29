@@ -1,0 +1,1 @@
+(function(){console.log("123dsdß1")}).call(this);

@@ -20,6 +20,6 @@ app.get('/', function(req, res) {
     res.render('main', data)
 });
 
-app.listen(3000, function() {
+app.listen('80', function() {
     console.log('Im listen you');
 });

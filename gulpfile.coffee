@@ -14,7 +14,6 @@ gulp.task 'jade', ->
   .pipe gulp.dest 'public/dist/tpl'
   browserSync.reload
 
-
 gulp.task 'less', ->
   gulp.src 'public/less/main.less'
   .pipe do less
@@ -24,7 +23,10 @@ gulp.task 'less', ->
 
 
 gulp.task 'coffee', ->
-  gulp.src 'public/coffee/*.coffee'
+  gulp.src [
+    'public/coffee/controllers/*.coffee'
+    'public/coffee/*.coffee'
+  ]
   .pipe do coffee
   .pipe do compressJs
   .pipe gulp.dest 'public/dist/angular'
@@ -33,18 +35,18 @@ gulp.task 'coffee', ->
 
 gulp.task 'connect', ['jade', 'less'], ->
   browserSync.init
+    proxy: 'localhost'
     files: [
-      'public/jade/*.jade'
+      'public/views/*.jade'
       'public/less/*.less'
     ]
-    port: 3000
-    logConnections: true
-    notify: false
-    server: 'public/dist'
 
-  gulp.watch 'public/jade/*.jade', ['jade']
+  gulp.watch 'public/views/*.jade', ['jade']
   gulp.watch 'public/less/*.less', ['less']
-  gulp.watch 'public/coffee/*.coffee', ['coffee']
+  gulp.watch [
+    'public/coffee/*.coffee'
+    'public/coffee/**/*.coffee'
+  ], ['coffee']
 
 
 gulp.task 'default', ['connect']
